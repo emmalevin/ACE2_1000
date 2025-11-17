@@ -1,0 +1,20 @@
+experiment_dir: /scratch/gpfs/GVECCHI/el2358/ACE2_1000/2013/output/output_dir_2013_1_100
+n_forward_steps: 147459 #1460  #number of 6 hours, 10 yrs
+forward_steps_in_memory: 10
+checkpoint_path: /scratch/gpfs/GVECCHI/el2358/ACE2/ace2_era5_ckpt.tar
+logging:
+  log_to_screen: true
+  log_to_wandb: false
+  log_to_file: true
+  project: ace
+initial_condition:
+  path: /scratch/gpfs/GVECCHI/el2358/ACE2/initial_conditions/ic_2013_JAN_1_10.nc
+forcing_loader:
+  dataset:
+    data_path: /scratch/gpfs/GVECCHI/el2358/ACE2/forcing_data/
+    file_pattern: forcing_2013.nc
+    n_repeats: 101
+  num_data_workers: 4
+data_writer:
+  save_prediction_files: false
+  save_monthly_files: false
