@@ -1,6 +1,6 @@
-# Running 1,000 Ensembles of the ACE2 Model
+# Running 1,000 Ensembles of the ACE2 Model for TC analysis
 
-This repository contains scripts for generating **1,000 ensemble simulations** of the ACE2 atmosphere-only model for a single year (e.g., 2013) and subsequently **tracking tropical cyclones (TCs)** using the TempestExtremes algorithm.
+This repository contains scripts for generating **1,000 ensemble simulations** of the ACE2 atmosphere-only model for a single year (e.g., 2013) and subsequently **tracking tropical cyclones (TCs)** using the TempestExtremes algorithm. We then plot the distribution of simulated TC counts across the ensembles and fit the data to different distributions. 
 
 **ACE2 model code:** https://github.com/ai2cm/ace
 
@@ -84,5 +84,12 @@ A brief description of each script involved in the workflow is provided below.
 
 - **`inference_ace2_2013_track_tcs.sh`**  
   Runs the **TempestExtremes** tracking algorithm on the processed 6-hourly output to identify and track tropical cyclones.
+
+---
+
+### Tropical Cyclone Analysis
+
+- **`distributions.ipynb`**  
+  Counts the annual Atlantic TCs across the 1,000 ensembles, plots a histogram of the distribution, and fits the data to different discrete distributions using MLE estimation. 
 
 ---
