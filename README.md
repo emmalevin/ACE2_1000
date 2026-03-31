@@ -4,6 +4,8 @@ This repository contains scripts for generating **1,000 ensemble simulations** o
 
 **ACE2 model code:** https://github.com/ai2cm/ace
 
+Conda environment to run ACE is in geoclim_env.yaml
+
 ---
 
 ## Overview
