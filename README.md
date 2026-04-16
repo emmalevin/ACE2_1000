@@ -1,5 +1,9 @@
 # Running 1,000 Ensembles of the ACE2 Model for TC analysis
 
+This code supports the analysis presented in the paper titled "On the seasonal predictability of the 2020 North Atlantic tropical cyclone season" by Levin et al. If you use this repository or the methods implemented here in your research, please cite the following publication: https://eartharxiv.org/repository/view/12018/
+
+The dataset generated from this code containing tropical cyclone (TC) track data and monthly mean large-scale environmental fields derived from a 1,000-member ensemble generated using the ACE2 deep-learning climate emulator are available at: 10.5281/zenodo.19456834
+
 This repository contains scripts for generating **1,000 ensemble simulations** of the ACE2 atmosphere-only model for a single year (e.g., 2013) and subsequently **tracking tropical cyclones (TCs)** using the TempestExtremes algorithm. We then plot the distribution of simulated TC counts across the ensembles and fit the data to different distributions. 
 
 **ACE2 model code:** https://github.com/ai2cm/ace
