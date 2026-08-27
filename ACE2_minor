@@ -1,0 +1,27 @@
+# other important commands to run ACE2
+
+module load anaconda3/2025.6
+
+conda activate /home/GEOCLIM/software/anaconda3/2024.10/envs/geoclim
+
+
+
+import xarray as xr
+import pandas as pd
+
+# Path to the restart file
+infile = "/scratch/gpfs/GVECCHI/el2358/ACE2/output_dir_2020_11_10/restart.nc"
+outfile = "/scratch/gpfs/GVECCHI/el2358/ACE2/initial_conditions/ic_2020_JAN_11_20.nc"
+
+# Open dataset
+ds = xr.open_dataset(infile)
+
+# Create a new time coordinate (single datetime)
+new_time = pd.date_range("2020-01-01", periods=1)
+
+# Replace the 'sample' dimension with 'time'
+ds = ds.rename({"sample": "time"}).assign_coords(time=new_time)
+
+# Save to NetCDF
+ds.to_netcdf(outfile, format="NETCDF4", engine="netcdf4")
+print(f"Saved with time dimension to {outfile}")
